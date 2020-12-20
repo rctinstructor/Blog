@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Resenha Cultural</title>
+    <link href="~/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/estilo.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!-- cabeçalho -->
+    <partial name="Cabecalho" />
+    <div class="container clearfix">
+        <!-- região principal -->
+        <main>
+            @RenderBody()
+        </main>
+        <!-- menu lateral -->
+        <partial name="Lateral" />
+    </div>
+    <!-- rodapé -->
+    <partial name="Rodape" />
+    <!-- seção opcional para carregar os scripts -->
+    @RenderSection("Scripts", false)
+</body>
+</html>

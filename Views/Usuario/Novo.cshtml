@@ -1,0 +1,32 @@
+﻿@model RegistroViewModel
+@{ Layout = null; }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Blog - Login</title>
+    <link rel="stylesheet" href="~/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/estilo.css" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <main id="login-form">
+            <h2>Registro</h2>
+            @Html.ValidationSummary()
+            @using (Html.BeginForm("Cadastra", "Usuario", FormMethod.Post))
+            {
+            @Html.LabelFor(u => u.LoginName)
+            <input asp-for="LoginName" class="form-control" />
+            @Html.LabelFor(u => u.Email)
+            <input asp-for="Email" class="form-control" />
+            @Html.LabelFor(u => u.Senha)
+            <input asp-for="Senha" class="form-control" type="password" />
+            @Html.LabelFor(u => u.ConfirmacaoSenha)
+            <input asp-for="ConfirmacaoSenha" class="form-control" type="password" />
+            <input type="submit" value="Registrar" />
+            }
+        </main>
+    </div>
+</body>
+</html>
